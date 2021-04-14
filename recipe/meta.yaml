@@ -1,5 +1,5 @@
 {% set name = "text_extensions_for_pandas" %}
-{% set version = "0.1b2" %}
+{% set version = "0.1b3" %}
 
 package:
   name: {{ name|lower }}
@@ -7,10 +7,10 @@ package:
 
 source:
   url: https://github.com/CODAIT/text-extensions-for-pandas/archive/{{ version }}.tar.gz
-  sha256: ab14b12dcea4b6928c2e1e5c83e3d23dd2b14baee1954504460ed93dd321405c
+  sha256: 06d38586257fd1003f76072d10fa5d09037ae9cb466c74cd354e42028db0463b
 
 build:
-  number: 1
+  number: 0
   skip: true  # [win or py<37]
   script: "{{ PYTHON }} -m pip install . -vv"
 
@@ -23,7 +23,7 @@ requirements:
   run:
     - python
     - numpy >=1.17
-    - pandas >=1.0.3,<1.2.0
+    - pandas >=1.0.3
     - pyarrow >=1.0.0
     - regex
     - memoized-property
