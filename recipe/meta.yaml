@@ -1,5 +1,5 @@
 {% set name = "text_extensions_for_pandas" %}
-{% set version = "0.2.0" %}
+{% set version = "0.2.2" %}
 
 package:
   name: {{ name|lower }}
@@ -7,10 +7,10 @@ package:
 
 source:
   url: https://github.com/CODAIT/text-extensions-for-pandas/archive/v{{ version }}.tar.gz
-  sha256: 9c146d0ebeb45a3ad86484794c7bc2617559b8539400832c491dc99e8d2c1a36
+  sha256: 78fb3be60a673868f4f7bc6597a78ca9cb371eeed5762ad6c12ebf389dcfad0f
 
 build:
-  number: 2
+  number: 0
   skip: true  # [win or py<36]
   script: {{ PYTHON }} -m pip install . -vv
 
